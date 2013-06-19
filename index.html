@@ -12,12 +12,14 @@ document.addEventListener("deviceready",onDeviceReady,
 false);
 }
 function onDeviceReady() {
-navigator.notification.alert("Tú eres el ganador! ' ,  
+navigator.notification.alert("Tu eres el ganador! " ,  
             alertDismissed ,          
             'Game Over' ,             
             'Hecho'                   );
 navigator.notification.vibrate( 2500 );
 navigator.notification.beep( 5 );
+navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
 }
 </script>
 
